@@ -1,12 +1,11 @@
 {
-  "name": "permutato",
+  "name": "@elypia/permutato",
   "version": "1.0.0",
   "description": "Generate a dictionary of combinations using a list of source words and settings.",
   "keywords": [
     "dictionary",
     "generator",
-    "bruteforce",
-    "cli"
+    "bruteforce"
   ],
   "license": "Apache-2.0",
   "author": "Elypia",
@@ -20,7 +19,11 @@
     "url": "https://gitlab.com/Elypia/permutato/issues"
   },
   "scripts": {
-
+    "start": "npm run build && node dist/index.js",
+    "build": "npx tsc",
+    "clean": "rm -r dist/",
+    "lint": "npx tslint packages/",
+    "test": "npx jest"
   },
   "dependencies": {
     "mathjs": "^6.6.3"
@@ -30,7 +33,6 @@
     "@types/mathjs": "^6.0.5",
     "@types/node": "^12.11.1",
     "jest": "^25.3.0",
-    "lerna": "^3.20.2",
     "ts-jest": "^25.3.1",
     "tslint": "^5.20.1",
     "typescript": "~3.6.4",
